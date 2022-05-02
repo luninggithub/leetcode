@@ -109,11 +109,4 @@ public class Day6 {
         }
         return all;
     }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
 }
