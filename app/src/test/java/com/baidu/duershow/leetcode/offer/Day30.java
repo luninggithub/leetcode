@@ -25,7 +25,7 @@ public class Day30 {
      * @return
      */
     public String[] printNumbers2(int n) {
-
+        return null;
     }
 
 }

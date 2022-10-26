@@ -1,3 +1,4 @@
 include ':jsbridge'
 include ':app'
 rootProject.name = "LeetCode"
+include ':lnhttp'
