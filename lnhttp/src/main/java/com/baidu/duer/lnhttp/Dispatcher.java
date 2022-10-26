@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 
-public class Dispather {
+public class Dispatcher {
 
     // TODO 最多同时请求的数量
     private int maxRequests;
@@ -22,11 +22,11 @@ public class Dispather {
     // TODO 同一个host最多允许请求的数量
     private int maxRequestPreHost;
 
-    public Dispather(){
+    public Dispatcher() {
         this(64, 5);
     }
 
-    public Dispather(int maxRequests,int maxRequestPreHost) {
+    public Dispatcher(int maxRequests, int maxRequestPreHost) {
         this.maxRequestPreHost = maxRequestPreHost;
         this.maxRequests = maxRequests;
     }
@@ -127,8 +127,6 @@ public class Dispather {
                 return;
             }
         }
-
     }
-
 
 }

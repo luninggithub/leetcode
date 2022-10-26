@@ -8,7 +8,7 @@ import java.util.List;
 public class HttpClient {
 
     //设置调度器
-    private Dispather dispather;
+    private Dispatcher dispatcher;
 
     private List<Interceptor> interceptors;
 
@@ -20,8 +20,8 @@ public class HttpClient {
         return retryTimes;
     }
 
-    public Dispather getDispather() {
-        return dispather;
+    public Dispatcher getDispather() {
+        return dispatcher;
     }
 
     public List<Interceptor> getInterceptors() {
@@ -36,7 +36,7 @@ public class HttpClient {
      * 构造方法
      */
     public HttpClient(Builder builder) {
-        this.dispather = builder.dispather;
+        this.dispatcher = builder.dispatcher;
         this.interceptors = builder.interceptors;
         this.retryTimes = builder.retryTimes;
         this.connectionPool = builder.connectionPool;
@@ -53,7 +53,7 @@ public class HttpClient {
 
     //TODO 建造对象
     public static final class Builder{
-        Dispather dispather;
+        Dispatcher dispatcher;
         List<Interceptor> interceptors = new ArrayList<>();
         int retryTimes;
         ConnectionPool connectionPool;
@@ -61,8 +61,8 @@ public class HttpClient {
             interceptors.add(interceptor);
             return this;
         }
-        public Builder setDispather(Dispather dispather) {
-            this.dispather = dispather;
+        public Builder setDispather(Dispatcher dispatcher) {
+            this.dispatcher = dispatcher;
             return this;
         }
         public Builder setRetryTimes(int retryTimes) {
@@ -75,8 +75,8 @@ public class HttpClient {
         }
 
         public HttpClient build() {
-            if (null == dispather) {
-                dispather = new Dispather();
+            if (null == dispatcher) {
+                dispatcher = new Dispatcher();
             }
             if (null == connectionPool) {
                 connectionPool = new ConnectionPool();
