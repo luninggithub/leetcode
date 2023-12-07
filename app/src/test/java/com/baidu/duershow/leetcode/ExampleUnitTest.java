@@ -5,9 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * 知识点梳理：
- * 1. java各数据类型内存占用
- * 2. ThreadLocal用法
+ * 知识点梳理
  */
 public class ExampleUnitTest {
     @Test

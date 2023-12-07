@@ -1,0 +1,11 @@
+1. Binder通信
+2. Handler通信机制
+3. UI绘制流程
+4. Okhttp工作原理
+5. Anr检测流程
+6. 设计模式 MVVM、MVC
+7. 深度优先和广度优先
+8. Java数据类型内存占用
+9. ThreadLocal
+10. EventBus、RxJava
+11. 红黑树
