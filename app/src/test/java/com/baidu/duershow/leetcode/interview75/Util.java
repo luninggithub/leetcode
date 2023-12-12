@@ -98,4 +98,27 @@ public class Util {
         }
         return origin;
     }
+
+    public int[] getTarget(int[] price, int target) {
+        for (int i = 0; i < price.length-1; i++) {
+            for (int j = i + 1; j < price.length; j ++) {
+                if (price[i] + price[j] == target) {
+                    return new int[] {price[i], price[j]};
+                }
+            }
+        }
+        return null;
+    }
+
+    public String reverse(String message) {
+        String[] words = message.trim().split("\\s+");
+        StringBuilder res = new StringBuilder();
+        for (int i = words.length - 1; i >= 0; i--) {
+            res.append(words[i]);
+            if (i != 0) {
+                res.append(" ");
+            }
+        }
+        return res.toString();
+    }
 }
